@@ -6,11 +6,11 @@ import org.mybatis.spring.SqlSessionTemplate;
 
 import com.hwangdang.dao.Dao;
 
-public class AdminDaoImpl implements Dao {
+public class BoardQnADaoImpl implements Dao {
 
 	private SqlSessionTemplate session;
 	
-	public AdminDaoImpl(SqlSessionTemplate session){
+	public BoardQnADaoImpl(SqlSessionTemplate session){
 		this.session = session;
 	}
 	

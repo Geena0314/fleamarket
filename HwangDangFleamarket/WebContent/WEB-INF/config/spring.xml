@@ -16,11 +16,6 @@
 	<!-- 메인페이지 설정. -->
 	<mvc:view-controller path="/main.go" view-name="/WEB-INF/view/main.jsp" />
 	
-	<!-- QnA게시판 뷰 이동 -->
-
-
-
-
 
 	<!-- multipartResolver를 Bean으로 등록: multipart/form-data로 넘어온 요청 파라미터 처리(파일처리.) 
 		Controller handler 메소드 호출 전에 먼저 호출된다. bean으로 등록시 식별값을 반드시 multipartResolver로 

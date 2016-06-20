@@ -3,12 +3,14 @@ package com.hwangdang.vo;
 import java.io.Serializable;
 
 public class Cart implements Serializable{
-	public Cart(){};
 	private int cartProductAmount;
 	private String cartProductOption;
 	private String productId;
 	private String memberId;
 	private Product product; //자식 테이블 cart가 부모 테이블 Product를 받음, Product가 없으니 오류 발생
+
+	public Cart(){};
+	
 	public Cart(int cartProductAmount, String cartProductOption, String productId, String memberId, Product product) {
 		super();
 		this.cartProductAmount = cartProductAmount;

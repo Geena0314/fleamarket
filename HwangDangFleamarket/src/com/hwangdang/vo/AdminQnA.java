@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class AdminQnA implements Serializable{
-public AdminQnA(){};
 private int adminQnaNo;
 private String adminQnaTitle;
 private String adminQuaContent;
@@ -12,6 +11,8 @@ private String adminQnaWriter;
 private Date adminQnaDate;
 private int adminQnaHit;
 private String adminQnaPublished;
+
+public AdminQnA(){};
 
 public AdminQnA(int adminQnaNo, String adminQnaTitle, String adminQuaContent, String adminQnaWriter, Date adminQnaDate,
 		int adminQnaHit, String adminQnaPublished) {

@@ -11,6 +11,7 @@
 	
 	<mappers>
 		<mapper resource="com/hwangdang/common/config/mybatis/mapper/member-mapper.xml" />
+		<mapper resource="com/hwangdang/common/config/mybatis/mapper/admin-noticeQnA-mapper.xml" />
 	</mappers>
 
 </configuration>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="QnANotice">
+	
+	<sql id="select-basic">
+		SELECT  admin_qna_no ,
+				admin_qna_title ,
+				admin_qna_content ,
+				admin_qna_writer ,
+				admin_qna_date ,
+				admin_qna_hit ,
+				admin_qna_published ,
+				admin_qna_no ,
+				
+		FROM  admin_qna
+	</sql>
+	
+	 <resultMap type="com.hwangdang.vo.AdminQnA" id="resultmap-basic-admin-qna">
+		<id column="admin_qna_no"  property="adminQnaNo"/>
+	 
+	</resultMap> 
+	
+	 
+    <select id="admin-notice-selectList"  resultMap="resultmap-basic-admin-qna">
+		<include refid="select-basic"/> 
+		ORDER BY admin_qna_no DESC
+	</select> 
+	
+	<insert id="admin-notice-insert">
+		INSERT INTO  
+	</insert>
+</mapper>

@@ -4,13 +4,17 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class AdminQnA implements Serializable{
-private int adminQnaNo;
-private String adminQnaTitle;
-private String adminQuaContent;
-private String adminQnaWriter;
-private Date adminQnaDate;
-private int adminQnaHit;
-private String adminQnaPublished;
+
+	private int adminQnaNo;
+	private String adminQnaTitle;
+	private String adminQuaContent;
+	private String adminQnaWriter;
+	private Date adminQnaDate;
+	private int adminQnaHit;
+	private String adminQnaPublished;
+	
+	/*private AdminQnAReply reply;*/  //댓글객체 
+	
 
 public AdminQnA(){};
 

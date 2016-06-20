@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="QnANotice">
+<mapper namespace="boardQnA">
 	
 	<sql id="select-basic">
 		SELECT  admin_qna_no ,
@@ -10,21 +10,40 @@
 				admin_qna_date ,
 				admin_qna_hit ,
 				admin_qna_published ,
-				admin_qna_no ,
 				
 		FROM  admin_qna
 	</sql>
 	
-	 <resultMap type="com.hwangdang.vo.AdminQnA" id="resultmap-basic-admin-qna">
+
+	 <!-- 게시판글 한개조회 -->
+	 <resultMap type="com.hwangdang.vo.AdminQnA" id="resultmap-basic-one">
 		<id column="admin_qna_no"  property="adminQnaNo"/>
-	 
+	 	<result column="admin_qna_title"  property="adminQnaTitle" />
+	 	<result column="admin_qna_content"  property="adminQuaContent" />
+	 	<result column="admin_qna_writer"  property="adminQnaWriter" />
+	 	<result column="admin_qna_date"  property="adminQnaDate" />
+	 	<result column="admin_qna_hit"  property="adminQnaHit" />
+	 	<result column="admin_qna_published"  property="adminQnaPublished" />
 	</resultMap> 
 	
-	 
-    <select id="admin-notice-selectList"  resultMap="resultmap-basic-admin-qna">
+	
+	 <!-- 한개의 게시글 조회  -->
+    <select id="select-one"  resultMap="resultmap-basic-one" parameterType="int" >
 		<include refid="select-basic"/> 
 		ORDER BY admin_qna_no DESC
 	</select> 
+	
+	
+	 <!-- 게시판글 전체 조회  리턴 : List-->
+	<resultMap type="ArrayList" id="resultmap-basic-List">
+		
+	</resultMap>
+	
+	<select id="select-list"  resultMap="resultmap-basic-List">
+		<include refid="select-basic"/> 
+		ORDER BY admin_qna_no DESC
+	</select> 
+	
 	
 	<insert id="admin-notice-insert">
 		INSERT INTO  

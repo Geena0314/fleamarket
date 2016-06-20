@@ -85,6 +85,11 @@
 	</dependency>
 	
 	  <!--  spring mybatis -->
+	  <dependency>
+	  		<groupId>org.springframework</groupId>
+	  		<artifactId>spring-context</artifactId>
+	  		<version>4.2.6.RELEASE</version>
+  	  </dependency>
 	  
 	  <dependency>
 		    <groupId>org.mybatis</groupId>
@@ -112,9 +117,4 @@
 		</dependency>	
 		
   </dependencies>
-  
-
-  
-
-  
 </project>

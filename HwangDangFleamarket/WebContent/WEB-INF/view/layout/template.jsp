@@ -17,7 +17,7 @@ nav{
 	line-height: 50px;
 	background-color:lightgray;
 	padding: 15px;
-	min-height:700px;
+	height:700px;
 	width:250px;
 	float:left;
 }
@@ -27,10 +27,9 @@ section{
 	float:left;
 }
 footer{
-	background-color:pink;
-	padding-top:20px;
+	margin-bottom:50px;
 	text-align:center;
-	height:50px;
+	height:30px;
 	clear:both;
 }
 </style>

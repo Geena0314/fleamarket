@@ -14,8 +14,15 @@
 	<mvc:annotation-driven />
 
 	<!-- 메인페이지 설정. -->
-	<mvc:view-controller path="/main.go" view-name="/WEB-INF/view/main.jsp" />
+	<mvc:view-controller path="/main.go" view-name="main.tiles" />
 	
+	<bean name="tilesConfig" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/config/tiles-defs.xml</value>
+			</list>
+		</property>
+	</bean>
 
 	<!-- multipartResolver를 Bean으로 등록: multipart/form-data로 넘어온 요청 파라미터 처리(파일처리.) 
 		Controller handler 메소드 호출 전에 먼저 호출된다. bean으로 등록시 식별값을 반드시 multipartResolver로 
@@ -27,6 +34,7 @@
 	<!-- handler가 리턴한 View Name으로 등록된 bean을 view로 찾아주는 viewResolver 따라서 등록 순서를 
 		아래와 같에 해야함 -->
 	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+	<bean class="org.springframework.web.servlet.view.tiles3.TilesViewResolver"/>
 	<!-- 마지막 필수. -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver" />

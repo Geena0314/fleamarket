@@ -1,5 +1,23 @@
 <%@page contentType="text/html; charset=UTF-8"%>
-<a href="mainpage.do">메인페이지</a><br>
-<a href="join_form.do">회원가입</a><br>
-<a href="register_form.do">상품등록</a><br>
-<a href="no_tiles.do">타일즈 안타는 페이지 호출</a><br>
+<style type="text/css">
+button{
+width: 150px;
+height: 70px;
+padding: 5px;
+margin: 20px;
+}
+</style>
+<div id="sideMenu">
+	<div id="button1">
+   		<button><a href="#">듀토리얼</a></button><br>
+    </div>
+    <div id="button2">
+    	<button><a href="#">스토어 둘러보기</a></button><br>
+    </div>
+    <div id="button3">
+    	<button><a href="#">소식통</a></button><br>
+    </div>
+    <div id="button4">
+    	<button><a href="/HwangDangFleamarket/admin/noticeQnAList.go">QnA게시판</a></button><br>
+    </div>
+</div>

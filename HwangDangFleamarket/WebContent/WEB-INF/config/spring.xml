@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:c="http://www.springframework.org/schema/c"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
@@ -22,7 +24,7 @@
 		Controller handler 메소드 호출 전에 먼저 호출된다. bean으로 등록시 식별값을 반드시 multipartResolver로 
 		한다. -->
 	<bean name="multipartResolver"
-		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+		class="CommonsMultipartResolver"/>
 
 	<!-- View Resolver bean으로 등록 -->
 	<!-- handler가 리턴한 View Name으로 등록된 bean을 view로 찾아주는 viewResolver 따라서 등록 순서를 

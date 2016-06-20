@@ -3,7 +3,7 @@ package com.hwangdang.vo;
 import java.io.Serializable;
 
 public class Cart implements Serializable{
-	public Cart(){};
+	public Cart(){};//카트
 	private int cartProductAmount;
 	private String cartProductOption;
 	private String productId;

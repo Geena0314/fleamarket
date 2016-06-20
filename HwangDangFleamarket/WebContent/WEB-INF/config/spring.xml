@@ -15,6 +15,8 @@
 
 	<!-- 메인페이지 설정. -->
 	<mvc:view-controller path="/main.go" view-name="/WEB-INF/view/main.jsp" />
+	<!-- test -->
+	<mvc:view-controller path="/main2.go" view-name="/WEB-INF/view/main.jsp" />
 
 	<!-- multipartResolver를 Bean으로 등록: multipart/form-data로 넘어온 요청 파라미터 처리(파일처리.) 
 		Controller handler 메소드 호출 전에 먼저 호출된다. bean으로 등록시 식별값을 반드시 multipartResolver로 
@@ -34,13 +36,13 @@
 	<bean name="dataSource"  class="org.apache.tomcat.dbcp.dbcp2.BasicDataSource"
 		p:driverClassName="oracle.jdbc.driver.OracleDriver"
 		p:url="jdbc:oracle:thin:@127.0.0.1:1521:XE"
-		p:username="hwang"
+		p:username="hwang" 
 		p:password="dang"
 		p:maxIdle="100"  />
 
 	<bean name="sqlSessionFactory"  class="org.mybatis.spring.SqlSessionFactoryBean"
 		p:dataSource-ref="dataSource"
-		p:configLocation="com/hwangdang/common/config/mybatis/mybatis-config.xml"
+		p:configLocation="classpath:com/hwangdang/common/config/mybatis/mybatis-config.xml"
 	 />
 
 	<bean  name="sqlSessionTemplate"   class="org.mybatis.spring.SqlSessionTemplate"

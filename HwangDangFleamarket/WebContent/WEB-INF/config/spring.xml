@@ -30,4 +30,23 @@
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver" />
 
+	<!-- DB연결  basicDataSource -->
+	<bean name="dataSource"  class="org.apache.tomcat.dbcp.dbcp2.BasicDataSource"
+		p:driverClassName="oracle.jdbc.driver.OracleDriver"
+		p:url="jdbc:oracle:thin:@127.0.0.1:1521:XE"
+		p:username="hwang"
+		p:password="dang"
+		p:maxIdle="100"  />
+
+	<bean name="sqlSessionFactory"  class="org.mybatis.spring.SqlSessionFactoryBean"
+		p:dataSource-ref="dataSource"
+		p:configLocation="com/hwangdang/common/config/mybatis/mybatis-config.xml"
+	 />
+
+	<bean  name="sqlSessionTemplate"   class="org.mybatis.spring.SqlSessionTemplate"
+		c:sqlSessionFactory-ref="sqlSessionFactory"
+	 />
+	
+	
+	
 </beans>

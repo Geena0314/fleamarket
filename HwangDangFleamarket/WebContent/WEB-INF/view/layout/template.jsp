@@ -17,8 +17,9 @@ nav{
 	line-height: 50px;
 	background-color:lightgray;
 	padding: 15px;
-	height:700px;
-	width:250px;
+	padding-top: 90px;
+	height:500px;
+	width:200px;
 	float:left;
 }
 section{

@@ -15,7 +15,7 @@
 	height:20px;
 }
 </style>
-	<h2>황당 플리마켓</h2>
+	<h1>황당 플리마켓</h1>
 	<div id="navBar">
 		<div id="home">
 			<a href="#">메인</a>

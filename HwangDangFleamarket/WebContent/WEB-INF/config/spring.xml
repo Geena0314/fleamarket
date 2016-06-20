@@ -52,7 +52,9 @@
 		c:sqlSessionFactory-ref="sqlSessionFactory" />
 	
 	<bean name="adminDaoImpl"  class="com.hwangdang.daoimpl.AdminDaoImpl"  c:session-ref="sqlSessionTemplate"/>
-	<bean name="adminServiceImpl"  class="com.hwangdang.serviceimpl.AdminServiceImpl"  c:admindao-ref="adminDaoImpl"/>
+	<bean name="adminServiceImpl"  class="com.hwangdang.serviceimpl.AdminServiceImpl"  c:adminDao-ref="adminDaoImpl"/>
+	
+	<!-- <bean name="qnaBoard" class="com.hwangdang.controller.QnABoardController" c:service-ref="adminServiceImpl" /> -->
 	
 	
 </beans>

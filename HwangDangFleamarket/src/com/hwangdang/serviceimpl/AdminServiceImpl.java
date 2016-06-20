@@ -1,13 +1,24 @@
 package com.hwangdang.serviceimpl;
 
-import com.hwangdang.dao.Dao;
+import java.util.List;
+
+import com.hwangdang.daoimpl.AdminDaoImpl;
 import com.hwangdang.service.Service;
 
-public class AdminServiceImpl implements Service {
 
-	private Dao admindao;
+
+public class AdminServiceImpl implements Service {
 	
-	public AdminServiceImpl(Dao admindao){
-		this.admindao = admindao;
+	private AdminDaoImpl adminDao;
+	
+	public AdminServiceImpl(AdminDaoImpl adminDao){
+		this.adminDao = adminDao;
 	}
+	
+	public List getBoardList(){
+		
+		return adminDao.selectAllQnABoard();
+	}
+	
+	
 }

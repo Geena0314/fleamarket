@@ -7,7 +7,7 @@ public class AdminQnA implements Serializable{
 
 	private int adminQnaNo;
 	private String adminQnaTitle;
-	private String adminQuaContent;
+	private String adminQnaContent;
 	private String adminQnaWriter;
 	private Date adminQnaDate;
 	private int adminQnaHit;
@@ -23,7 +23,7 @@ public AdminQnA(int adminQnaNo, String adminQnaTitle, String adminQuaContent, St
 	super();
 	this.adminQnaNo = adminQnaNo;
 	this.adminQnaTitle = adminQnaTitle;
-	this.adminQuaContent = adminQuaContent;
+	this.adminQnaContent = adminQuaContent;
 	this.adminQnaWriter = adminQnaWriter;
 	this.adminQnaDate = adminQnaDate;
 	this.adminQnaHit = adminQnaHit;
@@ -47,11 +47,11 @@ public void setAdminQnaTitle(String adminQnaTitle) {
 }
 
 public String getAdminQuaContent() {
-	return adminQuaContent;
+	return adminQnaContent;
 }
 
 public void setAdminQuaContent(String adminQuaContent) {
-	this.adminQuaContent = adminQuaContent;
+	this.adminQnaContent = adminQuaContent;
 }
 
 public String getAdminQnaWriter() {
@@ -96,7 +96,7 @@ public int hashCode() {
 	result = prime * result + ((adminQnaPublished == null) ? 0 : adminQnaPublished.hashCode());
 	result = prime * result + ((adminQnaTitle == null) ? 0 : adminQnaTitle.hashCode());
 	result = prime * result + ((adminQnaWriter == null) ? 0 : adminQnaWriter.hashCode());
-	result = prime * result + ((adminQuaContent == null) ? 0 : adminQuaContent.hashCode());
+	result = prime * result + ((adminQnaContent == null) ? 0 : adminQnaContent.hashCode());
 	return result;
 }
 
@@ -133,10 +133,10 @@ public boolean equals(Object obj) {
 			return false;
 	} else if (!adminQnaWriter.equals(other.adminQnaWriter))
 		return false;
-	if (adminQuaContent == null) {
-		if (other.adminQuaContent != null)
+	if (adminQnaContent == null) {
+		if (other.adminQnaContent != null)
 			return false;
-	} else if (!adminQuaContent.equals(other.adminQuaContent))
+	} else if (!adminQnaContent.equals(other.adminQnaContent))
 		return false;
 	return true;
 }
@@ -144,7 +144,7 @@ public boolean equals(Object obj) {
 @Override
 public String toString() {
 	return "AdminQnA [adminQnaNo=" + adminQnaNo + ", adminQnaTitle=" + adminQnaTitle + ", adminQuaContent="
-			+ adminQuaContent + ", adminQnaWriter=" + adminQnaWriter + ", adminQnaDate=" + adminQnaDate
+			+ adminQnaContent + ", adminQnaWriter=" + adminQnaWriter + ", adminQnaDate=" + adminQnaDate
 			+ ", adminQnaHit=" + adminQnaHit + ", adminQnaPublished=" + adminQnaPublished + "]";
 }
 

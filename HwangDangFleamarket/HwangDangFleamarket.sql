@@ -70,6 +70,9 @@ DROP TABLE code
 DROP TABLE category 
 	CASCADE CONSTRAINTS;
 
+
+	
+	
 /* 회원vvvvvvvvvvvv*/
 CREATE TABLE member (
 	member_id VARCHAR2(30) primary key, /* 아이디 */
@@ -111,8 +114,15 @@ CREATE TABLE seller (
 	member_id varchar2(30) not null,
 	foreign key(member_id) references member(member_id) on delete cascade
 );
-drop sequence seller_store_no_seq
+
+
 create sequence seller_store_no_seq nocache;
+
+/* 시퀀스 삭제 */
+drop sequence seller_store_no_seq
+	
+
+
 insert into seller values (seller_store_no_seq.nextval, '황당마켓1', '12345678901', '업종임', '업종소분류', '123-456',
    										   '경기도 성남시 분당구 야탑동.', '노블리치오피스텔 B동 313호', '사진임', '판매물품1', '판매물품2', '판매물품3', '소개글', 'lsj4216');
 insert into seller values (seller_store_no_seq.nextval, '황당마켓2', '12345678901', '업종임', '업종소분류', '123-456',
@@ -120,8 +130,11 @@ insert into seller values (seller_store_no_seq.nextval, '황당마켓2', '123456
 insert into seller values (seller_store_no_seq.nextval, '황당마켓3', '12345678901', '업종임', '업종소분류', '123-456',
    										   '경기도 성남시 분당구 야탑동.', '노블리치오피스텔 B동 313호', '사진임', '판매물품1', '판매물품2', '판매물품3', '소개글', 'lsj421678');   										   
 
-/* 상품vvvvvvvvv */
+   										   
+/*   상품 TB 삭제 */
 drop table product
+
+/* 상품vvvvvvvvv */
 CREATE TABLE product (
 	product_id VARCHAR2(30) primary key, /* 상품ID */
 	product_name VARCHAR2(30) NOT NULL, /* 상품명 */
@@ -154,6 +167,7 @@ CREATE TABLE review (
 );
 drop sequence review_no_seq
 create sequence review_no_seq nocache;
+
 insert into review values (review_no_seq.nextval, '리뷰내용', '19901126', '작성자', '상품id');
 insert into review values (review_no_seq.nextval, '리뷰내용1', '19911126', '작성자1', '상품id2');
 insert into review values (review_no_seq.nextval, '리뷰내용2', '19921126', '작성자2', '상품id3');
@@ -248,6 +262,15 @@ CREATE TABLE admin_QnA (
 );
 drop sequence admin_qna_no_seq
 create sequence admin_qna_no_seq nocache;
+
+
+INSERT INTO ADMIN_QNA  VALUES(  admin_qna_no_seq.nextval ,'임시QnA제목1'  ,'임시글내용ABC1' ,'scott12','2015-02-12',0 , 't');
+INSERT INTO ADMIN_QNA VALUES(  admin_qna_no_seq.nextval ,'임시QnA제목2'  ,'임시글내용ABC12' ,'scott12','2015-02-11',0 , 't');
+INSERT INTO ADMIN_QNA VALUES(  admin_qna_no_seq.nextval ,'임시QnA제목3'  ,'임시글내용ABC123' ,'scott123','2015-02-04',0 , 'f');
+INSERT INTO ADMIN_QNA VALUES(  admin_qna_no_seq.nextval ,'임시QnA제목4'  ,'임시글내용ABC1234' ,'scott124','2015-02-02',0 , 't');
+
+
+
 
 /* 관리자QnA댓글 vvvvvvv*/
 CREATE TABLE admin_QnA_reply (

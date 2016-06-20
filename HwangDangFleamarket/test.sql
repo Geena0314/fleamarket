@@ -12,7 +12,14 @@ CREATE TABLE  memberTest (
 	member_assign  number(1)  NOT NULL
 )
 
-	CREATE TABLE seller (
-	
-	
-	)
+SELECT * FROM ADMIN_QNA
+
+SELECT  admin_qna_no ,
+		admin_qna_title ,
+		admin_qna_content ,
+		admin_qna_writer ,
+		admin_qna_date ,
+		admin_qna_hit ,
+		admin_qna_published 			
+FROM  admin_qna
+Order By admin_qna_no DESC;

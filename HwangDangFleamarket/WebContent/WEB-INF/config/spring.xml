@@ -11,28 +11,28 @@
 
 	<!-- serviceImpl, controller, daoImpl -->
 	<context:component-scan
-		base-package="com.hwangdang.serviceimpl, com.hwangdang.controller, com.hwangdang.daoimpl" />
+		base-package="com.hwangdang.serviceimpl, com.hwangdang.controller, com.hwangdang.daoimpl"/>
 
 	<mvc:annotation-driven />
 
 	<!-- 메인페이지 설정. -->
-	<mvc:view-controller path="/main.go" view-name="/WEB-INF/view/main.jsp" />
+	<mvc:view-controller path="/main.go" view-name="/WEB-INF/view/main.jsp"/>
 	<!-- test -->
-	<mvc:view-controller path="/main2.go" view-name="/WEB-INF/view/main2.jsp" />
+	<mvc:view-controller path="/main2.go" view-name="/WEB-INF/view/main2.jsp"/>
 
 	<!-- multipartResolver를 Bean으로 등록: multipart/form-data로 넘어온 요청 파라미터 처리(파일처리.) 
 		Controller handler 메소드 호출 전에 먼저 호출된다. bean으로 등록시 식별값을 반드시 multipartResolver로 
 		한다. -->
 	<bean name="multipartResolver"
-		class="CommonsMultipartResolver"/>
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 
 	<!-- View Resolver bean으로 등록 -->
 	<!-- handler가 리턴한 View Name으로 등록된 bean을 view로 찾아주는 viewResolver 따라서 등록 순서를 
 		아래와 같에 해야함 -->
-	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
 	<!-- 마지막 필수. -->
 	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver" />
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"/>
 
 	<!-- DB연결  basicDataSource -->
 	<bean name="dataSource"  class="org.apache.tomcat.dbcp.dbcp2.BasicDataSource"
@@ -40,15 +40,14 @@
 		p:url="jdbc:oracle:thin:@127.0.0.1:1521:XE"
 		p:username="hwang" 
 		p:password="dang"
-		p:maxIdle="100"  />
+		p:maxIdle="100" />
 
 	<bean name="sqlSessionFactory"  class="org.mybatis.spring.SqlSessionFactoryBean"
 		p:dataSource-ref="dataSource"
-		p:configLocation="classpath:com/hwangdang/common/config/mybatis/mybatis-config.xml"
-	 />
+		p:configLocation="classpath:com/hwangdang/common/config/mybatis/mybatis-config.xml"/>
+		
 	<bean  name="sqlSessionTemplate"   class="org.mybatis.spring.SqlSessionTemplate"
-		c:sqlSessionFactory-ref="sqlSessionFactory"
-	 />
+		c:sqlSessionFactory-ref="sqlSessionFactory"/>
 	
 	
 	

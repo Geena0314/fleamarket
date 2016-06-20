@@ -57,7 +57,7 @@
             <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
             <li><a href="#">듀토리얼</a></li>
             <li><a href="#">스토어 둘러보기</a></li>
-            <li><a href="#">소식통</a></li>
+            <li><a href="/WEB-IN/view/admin/adminNotice.jsp">소식통</a></li>
                <li><a href="/WEb-INF/">QnA게시판</a></li>
                
           </ul>

@@ -4,13 +4,14 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class AdminQnAReply implements Serializable{
-public AdminQnAReply(){};
 private int adminReplyNo;
 private String adminReplyContent;
 private Date adminReplyDate;
 private String adminReplyWriter;
 private int adminQnaNo;
-private AdminQnA adminQnA;
+private AdminQnA adminQnA; //자식테이블인 AdminQnAReply가 부모테이블 AdminQnA를 받음
+
+public AdminQnAReply(){};
 
 public AdminQnAReply(int adminReplyNo, String adminReplyContent, Date adminReplyDate, String adminReplyWriter,
 		int adminQnaNo) {

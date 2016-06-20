@@ -44,7 +44,6 @@
 		p:dataSource-ref="dataSource"
 		p:configLocation="classpath:com/hwangdang/common/config/mybatis/mybatis-config.xml"
 	 />
-
 	<bean  name="sqlSessionTemplate"   class="org.mybatis.spring.SqlSessionTemplate"
 		c:sqlSessionFactory-ref="sqlSessionFactory"
 	 />

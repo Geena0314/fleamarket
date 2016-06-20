@@ -3,22 +3,24 @@ package com.hwangdang.vo;
 import java.io.Serializable;
 import java.util.Date;
 
-public class StoreQnA implements Serializable{
+public class StoreQnA implements Serializable
+{
 	private int storeQnANo;
 	private String storeQnATitle;
 	private String storeQnAContent;
 	private int storeQnAHit;
 	private int storeQnAPublished;
+	private String storeQnAWriter;
 	private Date storeQnADate;
 	private String productId;
-	
+
 	public StoreQnA()
 	{
 		// TODO Auto-generated constructor stub
 	}
 
 	public StoreQnA(int storeQnANo, String storeQnATitle, String storeQnAContent, int storeQnAHit,
-			int storeQnAPublished, Date storeQnADate, String productId)
+			int storeQnAPublished, String storeQnAWriter, Date storeQnADate, String productId)
 	{
 		super();
 		this.storeQnANo = storeQnANo;
@@ -26,6 +28,7 @@ public class StoreQnA implements Serializable{
 		this.storeQnAContent = storeQnAContent;
 		this.storeQnAHit = storeQnAHit;
 		this.storeQnAPublished = storeQnAPublished;
+		this.storeQnAWriter = storeQnAWriter;
 		this.storeQnADate = storeQnADate;
 		this.productId = productId;
 	}
@@ -80,6 +83,16 @@ public class StoreQnA implements Serializable{
 		this.storeQnAPublished = storeQnAPublished;
 	}
 
+	public String getStoreQnAWriter()
+	{
+		return storeQnAWriter;
+	}
+
+	public void setStoreQnAWriter(String storeQnAWriter)
+	{
+		this.storeQnAWriter = storeQnAWriter;
+	}
+
 	public Date getStoreQnADate()
 	{
 		return storeQnADate;
@@ -112,6 +125,7 @@ public class StoreQnA implements Serializable{
 		result = prime * result + storeQnANo;
 		result = prime * result + storeQnAPublished;
 		result = prime * result + ((storeQnATitle == null) ? 0 : storeQnATitle.hashCode());
+		result = prime * result + ((storeQnAWriter == null) ? 0 : storeQnAWriter.hashCode());
 		return result;
 	}
 
@@ -155,6 +169,12 @@ public class StoreQnA implements Serializable{
 				return false;
 		} else if (!storeQnATitle.equals(other.storeQnATitle))
 			return false;
+		if (storeQnAWriter == null)
+		{
+			if (other.storeQnAWriter != null)
+				return false;
+		} else if (!storeQnAWriter.equals(other.storeQnAWriter))
+			return false;
 		return true;
 	}
 
@@ -163,6 +183,7 @@ public class StoreQnA implements Serializable{
 	{
 		return "StoreQnA [storeQnANo=" + storeQnANo + ", storeQnATitle=" + storeQnATitle + ", storeQnAContent="
 				+ storeQnAContent + ", storeQnAHit=" + storeQnAHit + ", storeQnAPublished=" + storeQnAPublished
-				+ ", storeQnADate=" + storeQnADate + ", productId=" + productId + "]";
+				+ ", storeQnAWriter=" + storeQnAWriter + ", storeQnADate=" + storeQnADate + ", productId=" + productId
+				+ "]";
 	}
 }

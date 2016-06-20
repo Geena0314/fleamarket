@@ -43,9 +43,9 @@
             <li><a href="#">나의주문</a></li>
              <li><a href="#">장바구니</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
+         <!--  <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
-          </form>
+          </form> --> <!-- 검색 바 밑으로 뺄거라서 일단 주석처리 해놨어요. -->
         </div>
       </div>
     </nav>

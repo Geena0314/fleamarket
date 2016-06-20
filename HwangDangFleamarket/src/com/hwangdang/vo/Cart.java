@@ -7,7 +7,7 @@ public class Cart implements Serializable{
 	private String cartProductOption;
 	private String productId;
 	private String memberId;
-	private Product product; //자식 테이블 cart가 부모 테이블 Product를 받음, Product가 없으니 오류 발생
+	private Product product; //자식 테이블 cart가 부모 테이블 Product를 받음
 
 	public Cart(){};
 	

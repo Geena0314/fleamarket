@@ -9,7 +9,7 @@ private String adminReplyContent;
 private Date adminReplyDate;
 private String adminReplyWriter;
 private int adminQnaNo;
-private AdminQnA adminQnA;
+private AdminQnA adminQnA; //자식테이블인 AdminQnAReply가 부모테이블 AdminQnA를 받음
 
 public AdminQnAReply(){};
 

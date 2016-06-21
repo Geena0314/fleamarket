@@ -49,7 +49,6 @@
 	<bean name="adminDaoImpl"  class="com.hwangdang.daoimpl.BoardQnADaoImpl"  c:session-ref="sqlSessionTemplate"/>
 	<bean name="adminServiceImpl"  class="com.hwangdang.serviceimpl.BoardQnAServiceImpl"  c:adminDao-ref="adminDaoImpl"/>
 	
-	<!-- <bean name="qnaBoard" class="com.hwangdang.controller.QnABoardController" c:service-ref="adminServiceImpl" /> -->
 	
 	
 </beans>

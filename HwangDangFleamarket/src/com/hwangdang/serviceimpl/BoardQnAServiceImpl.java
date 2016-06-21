@@ -6,7 +6,6 @@ import com.hwangdang.daoimpl.BoardQnADaoImpl;
 import com.hwangdang.service.Service;
 
 
-
 public class BoardQnAServiceImpl implements Service {
 	
 	private BoardQnADaoImpl adminDao;
@@ -16,7 +15,6 @@ public class BoardQnAServiceImpl implements Service {
 	}
 	
 	public List getBoardList(){
-		
 		return adminDao.selectAllQnABoard();
 	}
 	

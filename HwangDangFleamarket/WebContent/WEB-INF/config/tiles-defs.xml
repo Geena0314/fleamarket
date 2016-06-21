@@ -23,6 +23,7 @@ c. extends : 기존 definition 태그의 내용을 상속받아 사용할때 사
 	</definition>
 	
 	
+	
 
 	<!-- wild cart(*)를 이용한 설정방식 
 		name의 * 는 핸들러메소드의 리턴타입 String문자열로 view-name을 이용하여 만듬 
